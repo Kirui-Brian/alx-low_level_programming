@@ -17,7 +17,7 @@ int main(void)
 		{
 			if (k != d)
 			{
-				puchar(d);
+				putchar(d);
 				putchar(k);
 
 				if (d == '8' && k == '9')
