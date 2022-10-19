@@ -22,7 +22,7 @@ int main(void)
 
 				if (d == '8' && k == '9')
 					continue;
-						
+				
 				putchar(',');
 				putchar(' ');
 			}
@@ -30,5 +30,5 @@ int main(void)
 	}
 	putchar('\n');
 
-	return(0);
+	return (0);
 }
