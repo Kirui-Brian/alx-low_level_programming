@@ -22,13 +22,4 @@ char *_strncat(char *dest, char *src, int n)
 		dest++;
 
 	if (n > srclen)
-		n = srclen;
-
-	src = start;
-
-	for (; i < n; i++)
-		*dest++ = *src++;
-
-	*dest = '\0';
-	return (temp);
 }
