@@ -4,8 +4,8 @@
  * _pow_recursion - A function that returns
  * the value of x raised to the power of y.
  *
- * @x - Value to raise.
- * @y - Power.
+ * @x: Value to raise.
+ * @y: Power.
  *
  * Return: The result of the power.
  */
