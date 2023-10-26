@@ -1,7 +1,5 @@
 #include "main.h"
 
-int nat_sqrt_recursion(int n, int i);
-
 /**
  * _sqrt_recursion - A function that returns
  *  the natural square root of a number.
@@ -30,7 +28,7 @@ int _sqrt_recursion(int n)
 
 int nat_sqrt_recursion(int n, int i)
 {
-	if (i * 8 > n)
+	if (i * i > n)
 		return (-1);
 	if (i * i == n)
 		return (i);
