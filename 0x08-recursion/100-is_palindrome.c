@@ -42,7 +42,7 @@ int check_palindrome(char *s, int i, int length)
 {
 	if (*(s + i) != *(s + length - 1))
 		return (0);
-	if ( >= length)
+	if (i >= length)
 		return (1);
 	return (check_palindrome(s, i + 1, length -1));
-}
+	}
