@@ -1,6 +1,6 @@
 #include "main.h"
 
-int nat_sqrt_recursion(intn, int i);
+int nat_sqrt_recursion(int n, int i);
 
 /**
  * _sqrt_recursion - A function that returns
