@@ -11,14 +11,19 @@
 char **strtow(char *str)
 {
     if (str == NULL || *str == '\0')
-        return (NULL);
+        return NULL;
+
+    unsigned int word_count = 0;
+    char *ptr = str;
 
     // Count the number of words in the input string
-    unsigned int word_count = 0;
-    for (char *ptr = str; *ptr != '\0'; ptr++)
+    while (*ptr != '\0')
     {
         if (*ptr == ' ')
+        {
+            ptr++;
             continue;
+        }
         while (*ptr != ' ' && *ptr != '\0')
             ptr++;
         word_count++;
@@ -29,9 +34,10 @@ char **strtow(char *str)
     if (words == NULL)
         return NULL;
 
-    // Split the input string into words and store them in the array
     unsigned int word_index = 0;
     char *word = strtok(str, " ");
+
+    // Split the input string into words and store them in the array
     while (word != NULL)
     {
         words[word_index] = strdup(word);
@@ -41,7 +47,7 @@ char **strtow(char *str)
             for (unsigned int i = 0; i < word_index; i++)
                 free(words[i]);
             free(words);
-            return (NULL);
+            return NULL;
         }
         word_index++;
         word = strtok(NULL, " ");
@@ -50,5 +56,5 @@ char **strtow(char *str)
     // Set the last element of the array to NULL
     words[word_index] = NULL;
 
-    return (words);
+    return words;
 }
