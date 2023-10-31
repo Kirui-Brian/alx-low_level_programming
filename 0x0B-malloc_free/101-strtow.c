@@ -9,7 +9,7 @@
  */
 int count_word(char *s)
 {
-	int werd, count, w;
+	int werd, count, words;
 
 	werd = 0;
 	words = 0;
