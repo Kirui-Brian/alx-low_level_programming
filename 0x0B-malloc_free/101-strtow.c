@@ -1,60 +1,77 @@
-#include <stdlib.h>
-#include <stdio.h>
-#include <string.h>
+#nclude <stdlib.h>
+#include "main.h"
+
+/**
+ * count_word - sub-function to count the No. of words in a string
+ * @s: string to evaluate
+ *
+ * Return: Number of words
+ */
+int count_word(char *s)
+{
+	int werd, count, w;
+
+	werd = 0;
+	words = 0;
+
+	for (count = 0; s[count] != '\0'; count++)
+	{
+		if (s[count] == ' ')
+			werd = 0;
+		else if (werd == 0)
+		{
+			werd = 1;
+			words++;
+		}
+	}
+
+	return (words);
+}
 
 /**
  * strtow - Splits a string into words.
  * @str: The input string to be split.
  *
- * Return: A pointer to an array of strings (words) or NULL on failure.
+ * Return: Pointer to an array of strings (words) or NULL on failure.
  */
 char **strtow(char *str)
 {
-    if (str == NULL || *str == '\0')
-        return NULL;
+	char **wording, *tmp;
+	int i, k = 0, len = 0, words, c = 0, start, end;
 
-    unsigned int word_count = 0;
-    char *ptr = str;
+	while (*(str + len))
+		len++;
+	words = count_word(str);
+	if (words == 0)
+		return (NULL);
 
-    // Count the number of words in the input string
-    while (*ptr != '\0')
-    {
-        if (*ptr == ' ')
-        {
-            ptr++;
-            continue;
-        }
-        while (*ptr != ' ' && *ptr != '\0')
-            ptr++;
-        word_count++;
-    }
+	wording = (char **)malloc(sizeof(char *) * (words + 1));
+	if (wording == NULL)
+		return (NULL);
 
-    // Allocate memory for the array of strings
-    char **words = (char **)malloc((word_count + 1) * sizeof(char *));
-    if (words == NULL)
-        return NULL;
+	for (i = 0; i <= len; i++)
+	{
+		if (str[i] == ' ' || str[i] == '\0')
+		{
+			if (c)
+			{
+				end = i;
+				tmp = (char *)malloc(sizeof(char) * (c + 1));
+				if (tmp == NULL)
+					return (NULL);
+				while (start < end)
+					*tmp++ = str[start++];
+				*tmp = '\0';
+				wording[k] = tmp - c;
+				k++;
+				c = 0;
+			}
+		}
+		else if (c++ == 0)
+			start = i;
+	}
 
-    unsigned int word_index = 0;
-    char *word = strtok(str, " ");
+	wording[k] = NULL;
 
-    // Split the input string into words and store them in the array
-    while (word != NULL)
-    {
-        words[word_index] = strdup(word);
-        if (words[word_index] == NULL)
-        {
-            // Free previously allocated memory and return NULL on failure
-            for (unsigned int i = 0; i < word_index; i++)
-                free(words[i]);
-            free(words);
-            return NULL;
-        }
-        word_index++;
-        word = strtok(NULL, " ");
-    }
-
-    // Set the last element of the array to NULL
-    words[word_index] = NULL;
-
-    return words;
+	return (wording);
 }
