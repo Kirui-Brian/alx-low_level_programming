@@ -6,63 +6,36 @@
  * @s1: The first input string.
  * @s2: The second input string.
  *
- * Return: A pointer to the newly allocated concatenated string, or NULL on failure.
+ * Return: A pointer to the newly allocated
+ * concatenated string, or NULL on failure.
  */
 
 char *str_concat(char *s1, char *s2)
 {
-    char *concatenated;
-    unsigned int len_s1 = 0, len_s2 = 0;
-    unsigned int i, j;
+	char *a;
+	int i, j, c, d;
 
-    // Handle cases where s1 or s2 is NULL by treating them as empty strings
-    if (s1 == NULL)
-        s1 = "";
-    if (s2 == NULL)
-        s2 = "";
+	if (s1 == NULL)
+		s1 = "";
+	if (s2 == NULL)
+		s2 = "";
 
-    // Calculate the lengths of s1 and s2
-    while (s1[len_s1] != '\0')
-        len_s1++;
-    while (s2[len_s2] != '\0')
-        len_s2++;
+	for (i = 0; s1[i] != '\0'; i++)
+		;
+	for (j = 0; s2[j] != '\0'; j++)
+		;
 
-    // Allocate memory for the concatenated string
-    concatenated = (char *)malloc((len_s1 + len_s2 + 1) * sizeof(char));
+	a = malloc((i * sizeof(*s1)) + (j * sizeof(*s2)) + 1);
+	if (a == NULL)
+		return (NULL);
 
-    if (concatenated == NULL)
-        return NULL;
+	for (c = 0, d = 0; c < (i + j + 1); c++)
+	{
+		if (c < i)
+			a[c] = s1[c];
+		else
+			a[c] = s2[d++];
+	}
 
-    // Copy the characters from s1 to the concatenated string
-    for (i = 0; i < len_s1; i++)
-        concatenated[i] = s1[i];
-
-    // Copy the characters from s2 to the concatenated string
-    for (j = 0; j < len_s2; j++)
-        concatenated[i + j] = s2[j];
-
-    // Add the null-terminator to the end of the concatenated string
-    concatenated[len_s1 + len_s2] = '\0';
-
-    return (concatenated);
+	return (a);
 }
-
-int main(void)
-{
-    char *s1 = "Hello, ";
-    char *s2 = "world!";
-    char *result = str_concat(s1, s2);
-
-    if (result != NULL)
-    {
-        printf("Concatenated: %s\n", result);
-        free(result); // Don't forget to free the memory when you're done with the result.
-    }
-    else
-    {
-        printf("Concatenation failed due to insufficient memory.\n");
-    }
-
-    return (0);
-}
-
