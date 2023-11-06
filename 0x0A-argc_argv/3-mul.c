@@ -1,4 +1,5 @@
 #include <stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 
 /**
@@ -10,22 +11,17 @@
  *         If the program does not receive two arguments - 1.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-    // Check if the program was not given exactly two arguments
-    if (argc != 3)
-    {
-        printf("Error\n");
-        return (1);
-    }
-
-    // Convert the two input arguments to integers
-    int num1 = atoi(argv[1]);
-    int num2 = atoi(argv[2]);
-
-    // Multiply the two numbers and print the result
-    int result = num1 * num2;
-    printf("%d\n", result);
-
-    return (0);
+	int mul;
+	// Check if the program was not given exactly two arguments.
+	if (argc != 3)
+	{
+		printf('Error\n');
+		return (1);
+	}
+	mul = atoi(*(argv + 1)) * atoi(*(argv +2));
+	printf('%d\n', mul);
+	
+	return (0);
 }

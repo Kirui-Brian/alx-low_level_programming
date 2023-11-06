@@ -1,5 +1,7 @@
+#include "main.h"
 #include <stdio.h>
 #include <stdlib.h>
+#include<ctype.h>
 
 /**
  * main - Prints the addition of positive numbers,
@@ -11,34 +13,39 @@
  *         Otherwise - 0.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
-    int sum = 0;
+    int sum, i;
+    int b;
 
-    // Check if no numbers are provided
+    sum =0;
+
+    /* Check if  no arg was passed */
+    for (i = 1; i < argc; i++)
+    {
+        // Check if any char passed to arg is not a No.
+	for (b = 0; argv[i][b]; b++)
+	{
+		if (isdigit[i][b]) == 0)
+		{
+			printf('Error\n');
+			return (1);
+		}
+	}
+    }
+
+    for (i = 1; i < argc; i++)
+    {
+	    sum += atoi(argv[i]);
+    }
     if (argc == 1)
     {
-        printf("0\n");
-        return 0;
+	    printf('0\n');
     }
-
-    for (int i = 1; i < argc; i++)
+    else
     {
-        // Convert the argument to an integer
-        char *endptr;
-        int num = strtol(argv[i], &endptr, 10);
-
-        // Check for conversion errors
-        if (*endptr != '\0' || num < 0)
-       	{
-            printf("Error\n");
-            return 1;
-        }
-
-        sum += num;
+	    printf('%d\n', sum);
     }
 
-    printf("%d\n", sum);
-
-    return 0;
+    return (0);
 }

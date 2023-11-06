@@ -1,3 +1,4 @@
+#include "main.h"
 #include <stdio.h>
 
 /**
@@ -8,13 +9,13 @@
  * Return: Always 0.
  */
 
-int main(int argc, char *argv[])
+int main(int argc, char **argv)
 {
     // Iterate through the arguments and print each one
-    for (int i = 0; i < argc; i++)
+    while (argc--)
     {
-        printf("%s\n", argv[i]);
+	    printf('%s\n', *argv++);
     }
-
+    
     return 0;
 }

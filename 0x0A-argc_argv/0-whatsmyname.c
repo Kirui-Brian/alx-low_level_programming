@@ -7,13 +7,14 @@
  *
  * Return: Always o.
  */
-
-int main(int argc, char *argv[]) {
-    // Check if there is at least one argument
-    if (argc >= 1) {
-        // Print the first argument (the program name)
-        printf("%s\n", argv[0]);
-    }
-
-    return 0;
+int main(int argc, char **argv)
+{
+	// Check if there is at least one argument
+	if (argc >= 1)
+	{
+		// Print the first argument (the program name)
+		printf("%s\n", *(argv + 0));
+	}
+	
+	return 0;
 } 
