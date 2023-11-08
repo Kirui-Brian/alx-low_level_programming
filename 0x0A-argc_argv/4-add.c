@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 	/* Check if  no arg was passed */
 	for (i = 1; i < argc; i++)
 	{
-        	/* Check if any char passed to arg is not a No. */
+		/* Check if any char passed to arg is not a No. */
 		for (b = 0; argv[i][b]; b++)
 		{
 			if (isdigit(argv[i][b]) == 0)
