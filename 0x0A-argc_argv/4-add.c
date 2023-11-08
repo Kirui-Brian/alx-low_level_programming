@@ -15,7 +15,8 @@
 int main(int argc, char **argv)
 {
 	int sum, i;
-	int b;	
+	int b;
+	
 	sum = 0;
 	
 	/* Check if no arg was passed */
