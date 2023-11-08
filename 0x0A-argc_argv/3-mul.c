@@ -10,11 +10,10 @@
  * Return: If the program receives two arguments - 0.
  *         If the program does not receive two arguments - 1.
  */
-
 int main(int argc, char **argv)
 {
 	int mul;
-	// Check if the program was not given exactly two arguments.
+	/* Check if the program was not given exactly two arguments. */
 	if (argc != 3)
 	{
 		printf('Error\n');
