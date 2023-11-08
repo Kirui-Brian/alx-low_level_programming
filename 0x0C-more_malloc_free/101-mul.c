@@ -58,7 +58,7 @@ void multiply(char *num1, char *num2)
 	{
 		if (i == 0 && result[i] == 0)
 			continue;
-		printf("%d\n", result[i]);
+		printf("%d", result[i]);
 	}
 	printf("\n");
 	free(result);
