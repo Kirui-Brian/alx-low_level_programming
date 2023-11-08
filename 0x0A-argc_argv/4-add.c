@@ -16,10 +16,10 @@ int main(int argc, char **argv)
 {
 	int sum, i;
 	int b;
-	
+
 	sum = 0;
-	
-	/* Check if no arg was passed */
+
+	/* check if no arguments were passed */
 	for (i = 1; i < argc; i++)
 	{
 		/* Check if any char passed to arg is not a No. */
