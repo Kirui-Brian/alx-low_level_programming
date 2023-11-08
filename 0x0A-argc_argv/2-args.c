@@ -11,11 +11,11 @@
 
 int main(int argc, char **argv)
 {
-    // Iterate through the arguments and print each one
+    /* Iterate through the arguments and print each one */
     while (argc--)
     {
 	    printf('%s\n', *argv++);
     }
     
-    return 0;
+    return (0);
 }
