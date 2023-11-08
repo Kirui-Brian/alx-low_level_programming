@@ -11,7 +11,7 @@
 int main(int argc, char **argv)
 {
 	/* Print the number of arguments (excluding the program name) */
-	if(*argv)
+	if (*argv)
 	{
 		printf("%d\n", argc - 1);
 	}
