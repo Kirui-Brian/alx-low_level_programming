@@ -9,10 +9,10 @@
  */
 int main(int argc, char **argv)
 {
-	// Check if there is at least one argument
+	/* Check if there is at least one argument */
 	if (argc >= 1)
 	{
-		// Print the first argument (the program name)
+		/* Print the first argument (the program name) */
 		printf("%s\n", *(argv + 0));
 	}
 	
