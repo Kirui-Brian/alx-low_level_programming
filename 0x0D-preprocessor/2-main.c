@@ -1,10 +1,4 @@
 #include <stdio.h>
-#ifndef MAIN_H
-#define MAIN_H
-
-#define NAME _file_
-
-#endif
 
 /**
  * main - prints the name of the file it was compiled from,
@@ -14,7 +8,7 @@
  */
 int main(void)
 {
-	printf("%s\n", NAME);
+	printf("%s\n", __FILE__);
 
 	return (0);
-}
+i}
