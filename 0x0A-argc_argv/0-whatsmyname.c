@@ -15,6 +15,6 @@ int main(int argc, char **argv)
 		/* Print the first argument (the program name) */
 		printf("%s\n", *(argv + 0));
 	}
-	
-	return 0;
-} 
+
+	return (0);
+}
