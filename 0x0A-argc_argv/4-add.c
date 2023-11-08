@@ -18,33 +18,31 @@ int main(int argc, char **argv)
 	int b;
 	
 	sum = 0;
-	
 	/* Check if  no arg was passed */
 	for (i = 1; i < argc; i++)
 	{
-        /* Check if any char passed to arg is not a No. */
-	for (b = 0; argv[i][b]; b++)
-	{
-		if (isdigit(argv[i][b]) == 0)
+        	/* Check if any char passed to arg is not a No. */
+		for (b = 0; argv[i][b]; b++)
 		{
-			printf("Error\n");
-			return (1);
+			if (isdigit(argv[i][b]) == 0)
+			{
+				printf("Error\n");
+				return (1);
+			}
 		}
 	}
-    }
+	for (i = 1; i < argc; i++)
+	{
+		sum += atoi(argv[i]);
+	}
+	if (argc == 1)
+	{
+		printf("0\n");
+	}
+	else
+	{
+		printf("%d\n", sum);
+	}
 
-    for (i = 1; i < argc; i++)
-    {
-	    sum += atoi(argv[i]);
-    }
-    if (argc == 1)
-    {
-	    printf("0\n");
-    }
-    else
-    {
-	    printf("%d\n", sum);
-    }
-
-    return (0);
+	return (0);
 }
