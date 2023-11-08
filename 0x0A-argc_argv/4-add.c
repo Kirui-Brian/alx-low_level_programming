@@ -18,6 +18,7 @@ int main(int argc, char **argv)
 	int b;
 	
 	sum = 0;
+	
 	/* Check if  no arg was passed */
 	for (i = 1; i < argc; i++)
 	{
