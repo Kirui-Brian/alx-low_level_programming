@@ -58,12 +58,15 @@ void multiply(char *num1, char *num2)
 	{
 		if (i == 0 && result[i] == 0)
 			continue;
-		printf("%d", result[i]);
+		printf("%d\n", result[i]);
 	}
 	printf("\n");
 	free(result);
 }
 
+/*
+ * main - Entry point.
+ */
 int main(int argc, char *argv[])
 {
 	if (argc != 3 || !is_digit(argv[1]) || !is_digit(argv[2]))
