@@ -14,7 +14,7 @@ int main(int argc, char **argv)
     /* Iterate through the arguments and print each one */
     while (argc--)
     {
-	    printf('%s\n', *argv++);
+	    printf("%s\n", *argv++);
     }
     
     return (0);
