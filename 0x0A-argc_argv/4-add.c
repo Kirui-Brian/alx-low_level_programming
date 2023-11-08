@@ -25,7 +25,7 @@ int main(int argc, char **argv)
         /* Check if any char passed to arg is not a No. */
 	for (b = 0; argv[i][b]; b++)
 	{
-		if ((isdigit[i][b]) == 0)
+		if (isdigit[i][b]) == 0
 		{
 			printf("Error\n");
 			return (1);
