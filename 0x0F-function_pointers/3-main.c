@@ -16,6 +16,7 @@ int main(int argc, char *argv[])
 		printf("Error\n");
 		return (98);
 	}
+
 	int num1 = atoi(argv[1]);
 	int num2 = atoi(argv[3]);
 	char *operator = argv[2];
