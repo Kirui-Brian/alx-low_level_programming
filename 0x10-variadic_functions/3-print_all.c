@@ -6,7 +6,7 @@
  * print_all - Prints various data types based on the format provided.
  * @format: List of types of arguments passed to the function.
  */
-void print_all(cons char * const format, ...)
+void print_all(const char * const format, ...)
 {
 	va_list args;
 	unsigned int i = 0;
