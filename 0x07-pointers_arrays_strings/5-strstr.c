@@ -8,7 +8,7 @@
  * @needle: A substring to search for.
  *
  * Return: A pointer to the beginning of  the located
- * 	substring or NULL if substring is not found.
+ *	substring or NULL if substring is not found.
  */
 
 char *_strstr(char *haystack, char *needle)
