@@ -10,7 +10,7 @@
  * Return: Pointer to the new dog_t, or NULL if it fails.
  *
  * Description: This function creates a new dog_t, allocates memory for it, and
- * 	copies the name and owner strings.
+ *	copies the name and owner strings.
  */
 dog_t *new_dog(char *name, float age, char *owner)
 {
@@ -26,9 +26,9 @@ dog_t *new_dog(char *name, float age, char *owner)
 
 	if (name_copy == NULL || owner_copy == NULL)
 	{
-		free(new_dog);
 		free(name_copy);
 		free(owner_copy);
+		free(new_dog);
 		return (NULL);
 	}
 
