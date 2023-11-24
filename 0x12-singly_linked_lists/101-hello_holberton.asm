@@ -1,15 +1,16 @@
 section .data
-	hello db 'Hello, Holberton', 0xA, 0	; 0xA is the newline character
+	format db 'Hello, Holberton', 0xA, 0	; 0xA is the newline character
 
 section .text
 	global main
 	extern printf
 
 main:
-	push rbp
-	mov rdi, hello
+	sub rsp, 8
+	mov rdi, format
+	mov rax, 0
 	call printf
-	pop rbp
+	add rsp, 8
 
 	; Exit the program
 	mov rax, 60         ; syscall: exit
