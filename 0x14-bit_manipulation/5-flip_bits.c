@@ -4,6 +4,7 @@
  * flip_bits - returns the number of bits to flip to get from one number to another
  * @n: first unsigned long integer
  * @m: second unsigned long integer
+ *
  * Return: the number of bits to flip
  */
 unsigned int flip_bits(unsigned long int n, unsigned long int m)
