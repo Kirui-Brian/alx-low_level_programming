@@ -1,17 +1,17 @@
 section .data
-	hello db "Hello, Holberton", 0
+    hello db 'Hello, Holberton', 0
 
 section .text
-	global _start
+    global main
+    extern printf
 
-	_start:
-		; Call printf function
-		mov rdi, hello	; format string
-		mov rax, 1	; syscall number for sys_write
-		mov rdx, 18	; length of the string
-		syscall
+main:
+    push rbp
+    mov rdi, hello
+    call printf
+    pop rbp
 
-		; Exit the program
-		mov rax, 60	; syscall number for sys_exit
-		xor rdi, rdi	; exit code 0
-		syscall
+    ; Exit the program
+    mov rax, 60         ; syscall: exit
+    xor rdi, rdi        ; status: 0
+    syscall
