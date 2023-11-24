@@ -1,9 +1,10 @@
+extern printf
+
 section .data
 	format db 'Hello, Holberton', 0xA, 0	; 0xA is the newline character
 
 section .text
 	global main
-	extern printf
 
 main:
 	sub rsp, 8
