@@ -3,8 +3,16 @@
 
 #include <stddef.h>
 
+/**
+ * struct list_s - Structure for a singly linked list node.
+ * @str: String data
+ * @len: Length of the string
+ * @next: Pointer to the next node in the list
+ */
+
 /* Structure for a singly  linked list node. */
-typedef struct list_s {
+typedef struct list_s
+{
 	char *str;		/* String data */
 	size_t len;		/* Length of the string */
 	struct list_s *next;	/* Pointer to the next node in the list */
