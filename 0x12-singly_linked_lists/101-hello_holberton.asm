@@ -13,3 +13,6 @@ print_hello:
 	syscall
 
 	ret
+
+section .data
+	newline db 10	; newline character
