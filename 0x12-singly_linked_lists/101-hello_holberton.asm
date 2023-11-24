@@ -1,5 +1,5 @@
 section .data
-	hello db 'Hello, Holberton', 0
+	format db 'Hello, Holberton', 0xA, 0	; 0xA is the newline character
 
 section .text
 	global main
@@ -7,10 +7,10 @@ section .text
 
 main:
 	push rbp
-	mov rdi, hello
+	mov rdi, format
+	mov rax, 0	; printf is a varargs function, so we need to clear the vector register
 	call printf
-	mov rax, 0	; printf is a varargs function, so we need to clear the vector registe
-	pop rbp
+	add rsp, 8	; Adjust the stack to remove any potential misalignment
 
 	; Exit the program
 	mov rax, 60         ; syscall: exit
