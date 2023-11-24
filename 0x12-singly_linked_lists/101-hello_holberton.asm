@@ -8,9 +8,7 @@ section .text
 main:
 	push rbp
 	mov rdi, hello
-	mov rax, 0	; printf is a varargs function, so we need to clear the vector register
 	call printf
-	add rsp, 8	; Adjust the stack to remove any potential misalignment
 	pop rbp
 
 	; Exit the program
