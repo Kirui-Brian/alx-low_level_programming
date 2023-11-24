@@ -5,19 +5,13 @@ section .text
 	global _start
 
 	_start:
-		; Call write system call (syscall number 1)
+		; Call printf function
 		mov rdi, hello	; format string
-		mov rax, 0	; syscall number for sys_write
-		call printf
+		mov rax, 1	; syscall number for sys_write
+		mov rdx, 18	; length of the string
+		syscall
 
 		; Exit the program
 		mov rax, 60	; syscall number for sys_exit
 		xor rdi, rdi	; exit code 0
 		syscall
-
-section .text
-	; External function declarations
-	extern printf
-
-section .bss
-	; BSS section for uninitialized data
