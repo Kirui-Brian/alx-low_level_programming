@@ -21,7 +21,7 @@ list_t *add_node(list_t **head, const char *str)
 	if (new_node == NULL)
 		return (NULL);
 
-	new_node->str = strdup(str);
+	new_node->str = strdup((*head)->str);
 	if (new_node->str == NULL)
 	{
 		free(new_node);
