@@ -32,9 +32,11 @@ void read_elf_header(int fd, Elf64_Ehdr *header)
  */
 void print_elf_header(Elf64_Ehdr *header)
 {
+	int i;
+
 	printf("ELF header:\n");
 	printf("	Magic:	");
-	for (int i = 0; i < EI_NIDENT; i++)
+	for (i = 0; i < EI_NIDENT; i++)
 		printf("%02x ", header->e_ident[i]);
 	printf("\n");
 
