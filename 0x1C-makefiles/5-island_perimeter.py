@@ -2,8 +2,10 @@
 """
 5-island_perimeter module
 
-Contains a function island_perimeter to calculate the perimeter of the island described in a grid.
+Contains a function island_perimeter to calculate
+the perimeter of the island described in a grid.
 """
+
 
 def island_perimeter(grid):
     """
