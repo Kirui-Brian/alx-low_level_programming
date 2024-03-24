@@ -1,11 +1,5 @@
-# Makefile for building the school executable
-
-# Compiler
 CC = gcc
+SRC = main.c holberton.c
 
-# Source files
-SRC = main.c school.c
-
-# Rule for building the executable
-all:
-    $(CC) $(SRC) -o school
+all: $(SRC)
+	$(CC) $(SRC) -o holberton
