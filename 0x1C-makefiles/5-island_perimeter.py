@@ -15,6 +15,7 @@ def island_perimeter(grid):
     Returns:
         int: Perimeter of the island.
     """
+
     perimeter = 0
 
     for i in range(len(grid)):
@@ -27,6 +28,7 @@ def island_perimeter(grid):
                     perimeter -= 2
 
     return perimeter
+
 
 if __name__ == "__main__":
     grid = [
