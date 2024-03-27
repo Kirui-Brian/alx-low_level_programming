@@ -1,9 +1,10 @@
 #include <stdio.h>
 
 /**
- * A program that prints the first 50 Fibonacci numbers, starting with 1 and 2, followed by a new line.
- * The numbers must be separated by comma, followed by a space ,
- * Return 0
+ * main - Prints the sum of even-valued Fibonacci sequence
+ *        terms not exceeding 4000000.
+ *
+ * Return: Always 0.
  */
 int main(void)
 {
@@ -20,6 +21,6 @@ int main(void)
 			sum += fibonacci[i];
 	}
 	printf("%ld\n", sum);
-	
+
 	return (0);
 }
