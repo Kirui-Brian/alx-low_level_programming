@@ -1,13 +1,13 @@
 #include "main.h"
 
 /**
- * int add - Check desc.
- * Desc: a function that adds two integers and returns the result.
- * Return: result.
+ * add - A function that adds two integers and returns the result.
+ * @num1: The first integer to be added.
+ * @num2: The second integer to be added.
+ *
+ * Return: The result of the addition.
  */
-int add(int, int)
+int add(int num1, int num2)
 {
-	int a, b;
-
-	return (a + b);
+	return (num1 + num2);
 }
