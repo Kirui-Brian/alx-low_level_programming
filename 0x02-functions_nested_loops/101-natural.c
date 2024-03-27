@@ -3,6 +3,7 @@
  * Auth: Kirui Brian
  */
 
+#include <stdio.h>
 #include "main.h"
 
 /**
