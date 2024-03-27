@@ -2,9 +2,10 @@
 #include "main.h"
 
 /**
- * void print_to_98 - Check desc.
- * Desc: a function that prints all natural numbers from n to 98, followed by a new line.
- * Return nothing
+ * print_to_98 - A function that prints all natural numbers
+ * 	from n to 98, followed by a new line.
+ *
+ * Return: nothing.
  */
 void print_to_98(int n)
 {
@@ -14,7 +15,7 @@ void print_to_98(int n)
 		{
 			printf("%d", n);
 
-			if ( n == 98)
+			if (n == 98)
 				continue;
 			printf(", ");
 		}
