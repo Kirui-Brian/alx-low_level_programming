@@ -1,4 +1,8 @@
-#include <stdio.h>
+/*
+ * File: 101-natural.c
+ * Auth: Kirui Brian
+ */
+
 #include "main.h"
 
 /**
