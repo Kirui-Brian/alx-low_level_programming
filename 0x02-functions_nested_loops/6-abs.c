@@ -1,8 +1,9 @@
 #include "main.h"
 
 /**
- * abs - Check esc
- * Description: function that computes the absolute value of an integer
+ * _abs - function that computes the absolute value of an integer
+ * @r: Integer value to be computed.
+ *
  * Return: Absolute value of r.
  */
 int _abs(int r)
